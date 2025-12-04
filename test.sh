@@ -11,7 +11,7 @@ echo "##teamcity[testStarted name='test2']"
 echo "##teamcity[testFinished name='test2' duration='1000']"
 sleep 2
 echo "##teamcity[testStarted name='test3']"
-if [[ -z "${SHOULD_BE_SET_ENV_VAR}"  ]]; then
+if [ -z "${SHOULD_BE_SET_ENV_VAR}"  ]; then
     echo "##teamcity[testStdErr name='test3' out='SHOULD_BE_SET_ENV_VAR environment variable should be set to any value']"
     echo "##teamcity[testFailed name='test3' message='SHOULD_BE_SET_ENV_VAR environment variable should be set to any value' details='SHOULD_BE_SET_ENV_VAR environment variable should be set to any value']"
 fi
