@@ -7,7 +7,9 @@ if [ -z "${PASSWORD}" ]; then
     echo "##teamcity[message text='LOGIN and PASSWORD environment variables should be set (to any value)' status='FAILURE']"
     exit 1
 fi
-sleep 5
+if [ ! -f "app.zip" ]; then
+    echo "-- have to rebuild the app (app.zip won't be created) --"
+    sleep 5
+fi
 echo "-- let's pretend deploy is fine --"
-sleep 5
 echo "-- app deploy stage finished --"
