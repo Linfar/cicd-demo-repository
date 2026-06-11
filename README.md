@@ -10,3 +10,4 @@ To test the app, run `sh test.sh`. If "app.zip" doesn't exist in the directory, 
 
 To deploy the app, set LOGIN and PASSWORD environment variables and run `sh deploy.sh`. If "app.zip" doesn't exist in the directory, deploy stage runs longer.
 
+
